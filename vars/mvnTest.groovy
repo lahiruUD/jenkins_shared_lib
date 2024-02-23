@@ -1,3 +1,3 @@
-def mvnTest() {
+def call() {
     sh 'mvn test'
 }
