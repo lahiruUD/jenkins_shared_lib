@@ -1,5 +1,5 @@
 def call(credentialsId) {
 
-waitForQualityGate abortPipeline: false, credentialsId: 'sonar-token'
+waitForQualityGate abortPipeline: false, credentialsId: sonar-token
 
 }	
