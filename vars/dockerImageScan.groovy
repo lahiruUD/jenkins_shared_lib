@@ -1,4 +1,4 @@
-
+/* 
 def call(String project, String ImageTag, String hubUser) {
 
     sh """ 
@@ -8,8 +8,9 @@ def call(String project, String ImageTag, String hubUser) {
 
 }
 
+ */
 
-/* 
+
 def call(String aws_account_id, String region, String ecr_repoName) {
 
     sh """ 
@@ -18,5 +19,3 @@ def call(String aws_account_id, String region, String ecr_repoName) {
     """
 
 }
-
- */
