@@ -1,5 +1,13 @@
 def call(String project, String ImageTag, String hubUser) {
-    withCredentials([usernamePassword(
+
+    withDockerRegistry(credentialsId: 'docker-cred-new', toolName: 'docker') {
+        sh "docker image push ${hubUser}/${project}:${ImageTag}"
+        sh "docker image push ${hubUser}/${project}:latest"
+
+    }
+
+
+/*     withCredentials([usernamePassword(
             credentialsId: "docker-cred",
             usernameVariable: "USER",
             passwordVariable: "PASS"
@@ -9,4 +17,4 @@ def call(String project, String ImageTag, String hubUser) {
     sh "docker image push ${hubUser}/${project}:${ImageTag}"
     sh "docker image push ${hubUser}/${project}:latest"
 
-}
+} */
